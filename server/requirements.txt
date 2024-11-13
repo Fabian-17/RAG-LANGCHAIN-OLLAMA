@@ -1,9 +1,11 @@
 fastapi
-uvicorn
+pydantic
+python-dotenv
 langchain
-langchain-core
-langchain-ollama
-langchain-chroma
+langchain_core
+langchain_ollama
+langchain_text_splitters
+langchain_chroma
+langchain_community
 chromadb
 PyPDF2
-python-dotenv

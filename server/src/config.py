@@ -11,6 +11,6 @@ class Config:
     
     @property
     def file(self) -> str:
-        return os.getenv('FILE') or "docs/file.pdf"
+        return os.getenv('FILE') or "docs/Anfibios.pdf"
     
 env = Config()
