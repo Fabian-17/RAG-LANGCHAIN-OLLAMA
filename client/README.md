@@ -1,8 +1,31 @@
-# React + Vite
+# RAG-LANGCHAIN Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este documento describe los pasos necesarios para levantar el servidor y utilizarlo.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js (v14 o superior)
+- npm (v6 o superior)
+
+## Instalación
+
+1. Instala las dependencias:
+
+    ```bash
+    npm install
+    ```
+
+## Levantar el Servidor
+
+1. Inicia el servidor de desarrollo:
+
+    ```bash
+    npm run dev
+    ```
+
+2. Abre tu navegador y navega a `http://localhost:5173` para ver la aplicación en funcionamiento.
+
+## Uso
+
+1. Una vez que el servidor esté en funcionamiento, puedes interactuar con la aplicación a través de la interfaz web.
+2. Sigue las instrucciones en pantalla para utilizar las funcionalidades proporcionadas por el servidor.

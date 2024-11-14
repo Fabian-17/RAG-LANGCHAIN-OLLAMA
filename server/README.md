@@ -1,45 +1,47 @@
-# Pasos para el inicio del proyecto
+# RAG-LANGCHAIN Server
 
-## 1. Clonar el repositorio
-```bash
-git clone https://github.com/devyan18/RAG-LANGCHAIN.git
-```
+## Requisitos 
+- Python 3.x: Si no lo tienes instalado, puedes descargarlo desde [python.org](https://www.python.org/downloads/).
+- pip: El gestor de paquetes de Python. Generalmente se instala automáticamente con Python 3.
 
-## 2. Iniciar docker compose
-```bash
-docker-compose up -d
-```
+## Configuración del Entorno Virtual
 
-## 3. Crear entorno virtual
-```bash
-python -m venv venv
-```
-o
-```bash
-python3 -m venv venv
-```
+Se recomienda usar entornos virtuales para evitar conflictos entre las dependencias de diferentes proyectos. Sigue estos pasos para crear y activar un entorno virtual:
 
-## 4. Activar entorno virtual
 ```bash
+# Instalar la herramienta virtualenv si no está instalada
+pip install virtualenv
+
+# Crear un nuevo entorno virtual
+virtualenv venv
+
+# Activar el entorno virtual (Windows)
+venv\Scripts\activate
+# o (Linux/macOS)
 source venv/bin/activate
 ```
 
-## 5. Instalar dependencias
+## Instalación de Dependencias
+Para instalar las librerías necesarias, ejecuta el siguiente comando después de activar tu entorno virtual:
 ```bash
-pip install langchain langchain_chroma langchain_core langchain_ollama langchain_community langchain_text_splitters python-dotenv chromadb PyPDF2
+pip install -r requirements.txt
 ```
 
-## 6. Setear variables de entorno
+## Setea las variables de entorno
 ```bash
 cp .env.example .env
 ```
-Luego editar el archivo .env con las credenciales de la base de datos
 
-## 7. Agregar el archivo file.pdf en la carpeta docs
+En el archivo .env agrega el modelo a usar y el nombre del archivo.
+
+
+## Agrega un archivo pdf en la carpeta docs
 
 Deberá ser un archivo pdf con el texto que se desea analizar en el proyecto
 
-## 8. Correr el servidor
+## Correr el servidor
+
+Ejecute el siguiente comando para levantar el servidor:
 ```bash
-python main.py
+uvicorn main:app --reload
 ```
