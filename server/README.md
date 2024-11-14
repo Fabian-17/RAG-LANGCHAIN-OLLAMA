@@ -37,7 +37,7 @@ En el archivo .env agrega el modelo a usar y el nombre del archivo.
 
 ## Agrega un archivo pdf en la carpeta docs
 
-Deberá ser un archivo pdf con el texto que se desea analizar en el proyecto
+Deberá ser un archivo pdf con el texto que se desea analizar en el proyecto dentro de la carpeta server, agrega la carpeta docs
 
 ## Correr el servidor
 
