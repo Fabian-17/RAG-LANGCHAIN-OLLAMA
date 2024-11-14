@@ -10,19 +10,19 @@ const Chatbot = () => {
     const [input, setInput] = useState('');
 
     const handleCreateConsult = (prompt) => {
-        fetch('http://localhost:3000/query', {
+        fetch('http://localhost:8000/query', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ 
-                code: `${prompt}`, 
+                question: `${prompt}`, 
             }),
         })
             .then((response) => response.json())
             .then((data) => {
-                setMessages([...messages, { text: data.message.content, sender: "bot" }]);
-                setMessages((prev) => [...prev, { text: data.message.content, sender: "bot" }]);
+                console.log(data);
+                setMessages((prev) => [...prev, { text: data.response, sender: "bot" }]);
             })
             .catch((error) => {
                 console.log(prompt);

@@ -4,6 +4,6 @@ __pycache__
 
 docs/*
 
-chroma
+chroma_db/*
 indexed_files.txt
 note.txt
